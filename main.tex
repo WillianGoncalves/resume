@@ -1,21 +1,23 @@
 \PassOptionsToPackage{dvipsnames}{xcolor}
-\documentclass[10pt,a4paper]{altacv}
+\documentclass[12pt,a4paper]{altacv}
 
 %Layout
 \geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
 
+%Fonts
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{AlegreyaSans}
+
 %Packages
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[default]{lato}
 \usepackage{hyperref}
+\usepackage{ragged2e}
 
 %Colors
-
-\definecolor{accent}{HTML}{000e17}
-\definecolor{heading}{HTML}{000e17}
-\definecolor{emphasis}{HTML}{696969}
-\definecolor{body}{HTML}{01415f}
+\definecolor{accent}{HTML}{192a56}
+\definecolor{heading}{HTML}{192a56}
+\definecolor{emphasis}{HTML}{333333}
+\definecolor{body}{HTML}{333333}
 
 \colorlet{heading}{heading}
 \colorlet{accent}{accent}
@@ -50,6 +52,18 @@
 
 %
 
+\begin{fullwidth}
+\cvsummary{Lorem Ipsum is simply dummy text of the printing and
+typesetting industry. Lorem Ipsum has been the industry's standard
+dummy text ever since the 1500s, when an unknown printer took a galley
+of type and scrambled it to make a type specimen book. It has survived
+not only five centuries, but also the leap into electronic typesetting,
+remaining essentially unchanged. It was popularised in the 1960s with
+the release of Letraset sheets containing Lorem Ipsum passages, and more
+recently with desktop publishing software like Aldus PageMaker including
+versions of Lorem Ipsum.}
+\end{fullwidth}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Experience %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \cvsection[page1sidebar]{Experience}
@@ -61,12 +75,12 @@
 \cvevent{Java Engineer}{Deegloo d.o.o.}{August 2019 --- Ongoing}{Zagreb, Croatia}
 
 \begin{itemize}
-    \setlength{\itemindent}{0.5em}
-    \item[--]   \small{Developing software using Java Spring Boot}
-    \item[--]   \small{Writing integration and unit tests using Cucumber}
-    \item[--]   \small{Version Control using Git}
-    \item[--]   \small{Tasks management using Jira}
-    \item[--]   \small{Working by Scrum framework}
+    \setlength{\itemindent}{1em}
+    \item[--]   {Developing software using Java Spring Boot}
+    \item[--]   {Writing integration and unit tests using Cucumber}
+    \item[--]   {Version Control using Git}
+    \item[--]   {Tasks management using Jira}
+    \item[--]   {Working by Scrum framework}
 \end{itemize}
 
 \medskip

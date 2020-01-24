@@ -104,6 +104,11 @@
 
 \renewenvironment{quote}{\color{accent}\itshape\large}{\par}
 
+\newcommand{\cvsummary}[1]{%
+  \bigskip%
+  {\color{body}\justify{#1}\par}\bigskip
+}
+
 \newcommand{\cvsection}[2][]{%
   \bigskip%
   \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}% 
