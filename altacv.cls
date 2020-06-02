@@ -13,6 +13,7 @@
 \LoadClass{extarticle}
 
 \RequirePackage[margin=2cm]{geometry}
+\RequirePackage{xcolor}
 \RequirePackage{fontawesome}
 
 %% v1.1: Optionally load academicons
@@ -25,12 +26,18 @@
   \newfontfamily{\AI}{academicons.ttf}
 \fi
 
-\RequirePackage{xcolor}
 
-\colorlet{accent}{blue!70!black}
-\colorlet{heading}{black}
-\colorlet{emphasis}{black}
-\colorlet{body}{black!80!white}
+%Colors
+\definecolor{accent}{HTML}{192a56}
+\definecolor{heading}{HTML}{192a56}
+\definecolor{emphasis}{HTML}{333333}
+\definecolor{body}{HTML}{333333}
+
+\colorlet{heading}{heading}
+\colorlet{accent}{accent}
+\colorlet{emphasis}{emphasis}
+\colorlet{body}{body}
+
 \newcommand{\itemmarker}{{\small\textbullet}}
 \newcommand{\ratingmarker}{\faCircle}
 
@@ -39,7 +46,7 @@
 \RequirePackage[skins]{tcolorbox}
 \RequirePackage{enumitem}
 \setlist{leftmargin=*,labelsep=0.5em,nosep,itemsep=0.25\baselineskip,after=\vskip0.5\baselineskip}
-\setlist[itemize]{label=\itemmarker}
+\setlist[itemize]{label=\faAngleRight}
 \RequirePackage{graphicx}
 \RequirePackage{etoolbox}
 \RequirePackage{dashrule}
@@ -113,7 +120,7 @@
   \bigskip%
   \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}% 
   {\color{heading}\LARGE\bfseries\MakeUppercase{#2}}\\[-1ex]%
-  {\color{heading}\rule{\linewidth}{2pt}\par}\medskip
+  {\color{heading}\rule{\linewidth}{1pt}\par}\medskip
 }
 
 \newcommand{\cvsubsection}[1]{%
@@ -144,9 +151,9 @@
 }
 
 \newcommand{\cvskill}[2]{%
-\textcolor{emphasis}{\textbf{#1}}\hfill
+\textcolor{emphasis}{#1}\hfill
 \foreach \x in {1,...,5}{%
-  \space{\ifnumgreater{\x}{#2}{\color{body!30}}{\color{accent}}\faCircle}}\par%
+  \space{\ifnumgreater{\x}{#2}{\faCircleO}{\faCircle}}}\par%
 }
 
 \newcommand{\wheelchart}[3]{%

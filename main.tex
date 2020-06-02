@@ -16,239 +16,37 @@
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 \usepackage{ragged2e}
-
-%Colors
-\definecolor{accent}{HTML}{192a56}
-\definecolor{heading}{HTML}{192a56}
-\definecolor{emphasis}{HTML}{333333}
-\definecolor{body}{HTML}{333333}
-
-\colorlet{heading}{heading}
-\colorlet{accent}{accent}
-\colorlet{emphasis}{emphasis}
-\colorlet{body}{body}
-
-\renewcommand{\itemmarker}{{\small\textbullet}}
-\renewcommand{\ratingmarker}{\faCircle}
-
-% FIXME added to allow create multiple cvskills in PROFESSIONAL SKILLS section
-\maxdeadcycles=300
-
-%
+\usepackage{fontawesome}
 
 \begin{document}
 
-\input{header}
+\input{partials/header}
 
 \begin{paracol}{1}
-  \cvsummary{
-    I started studying Information Systems in a 3-year technical course in
-    the Federal Center of Technologycal Education. As soon as I finished
-    the technical course, I entered a Bachelor's degree in Information
-    Systems, at the same institution. At that time, I was co-author of
-    a short article published in Brazilian Symposium on Multimedia and
-    the Web (WebMedia), the main event of the theme in Brazil.
-
-    I have been working with software development since 2012. In this
-    period I have worked in desktop, web and mobile projects, but int
-    the last years, I have been focusing on web development and on developing
-    skills like automated deployment and tests.
-
-    Today, I continue to study with online courses, seeking to improve
-    my skills.
-  }
+  \input{partials/summary}
 \end{paracol}
-
 
 \begin{paracol}{2} % Begin the multi-column environment
 
-\cvsection{Experience}
-
-\cvevent{Web Developer}{O2 Filmes}{Oct 2018 --- Ongoing}{Remote}
-
-\medskip
-
-\begin{itemize}
-    \setlength{\itemindent}{1em}
-    \item[--] {Developing backend using Ruby on Rails}
-    \item[--] {Developing frontend using React}
-    \item[--] {Working on Etherpad -- customizable open source editor}
-    \item[--] {Writing integration and unit tests using Mocha, WebdriverIO, Enzyme and Rspec}
-    \item[--] {Testing and deploying software with Semaphore}
-    \item[--] {Monitoring logs with Sematext}
-    \item[--] {Working with Google Analytics}
-    \item[--] {Reviewing code}
-    \item[--] {Working by Kanban system}
-\end{itemize}
-
-\medskip
-
-\cvevent{.NET Developer}{Prion}{Sep 2018 --- Oct 2018}{Nova Friburgo, RJ, Brazil}
-
-\begin{itemize}
-  \setlength{\itemindent}{1em}
-\item[--] {Developing and maintaining the Westcon Intranet using .NET Framework and SQL Server}
-\end{itemize}
-
-\medskip
-
-\cvevent{Web Developer}{Datahex}{May 2017 --- Aug 2018}{Nova Friburgo, RJ, Brazil}
-
-\begin{itemize}
-  \setlength{\itemindent}{1em}
-\item[--] {Developing backend using Node}
-\item[--] {Developing frontend using Angular}
-\item[--] {Developing mobile apps using Ionic}
-\item[--] {Developing desktop application using Electron}
-\item[--] {Deploying mobile app to Google Play store}
-\item[--] {Integrating mobile app with other devices, such as thermal printer and QR code reader}
-\item[--] {Developing software to import government-issued invoices}
-\item[--] {Reviewing code}
-\item[--] {Managing NoSql databases}
-\item[--] {Working by Scrum framework}
-\end{itemize}
-
-\medskip
-
-\cvevent{Web Developer}{Crafters Innovation Studio}{Jan 2017 --- May 2017}{Remote}
-
-\begin{itemize}
-  \setlength{\itemindent}{1em}
-\item[--] {Developing web applications using Ruby on Rails}
-\item[--] {Testing software using Rspec, adopting 100\% of software coverage}
-\item[--] {Reviewing code}
-\item[--] {Working by Kanban system}
-\end{itemize}
-
-\medskip
-
-\cvevent{.NET Developer}{R2MS}{Feb 2013 --- Jan 2017}{Nova Friburgo, RJ, Brazil}
-
-\begin{itemize}
-  \setlength{\itemindent}{1em}
-\item[--] {Developing desktop and web applications using .NET Framework}
-\item[--] {Developing user interfaces using WPF}
-\item[--] {Developing web applications frontend using Node}
-\item[--] {Integrating desktop application with fingerprint devices}
-\item[--] {Developing software to import government-issued invoices}
-\item[--] {Building and distributing installers for desktop applications}
-\item[--] {Managing Mysql databases}
-\item[--] {Experiencing different technologies, such as: C\#, XML, HTML, CSS, SQL}
-\end{itemize}
+\input{partials/experience}
 
 \pagebreak
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Education %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{partials/education}
 
-\cvsection{Education}
-
-\cvevent{Technical Course in Industrial Computing}{Federal Center of Technologycal Education, RJ, Brazil}{2009 -- 2012}{}
-
-\cvevent{Bachelor's degree in Information Systems}{Federal Center of Technologycal Education, RJ, Brazil}{2014 -- 2019}{}
-
-Undergraduated thesis: User Interface Prototype Generation from Agile Requirements Specifications written in Concordia
-
-\bigskip
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Works %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\cvsection{Works}
-
-\cvevent{User Interface Prototype Generation from Agile Requirements Specifications written in Concordia}{WebMedia 2019 -- Short article}{2019}{}
+\input{partials/works}
 
 \switchcolumn
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Skills %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{partials/professional_skills}
 
-\cvsection{Professional Skills}
+\input{partials/languages}
 
-\cvskill{Backend}{5}
-\cvskill{Frontend}{5}
-\cvskill{Git}{5}
-\cvskill{Docker}{4}
-\cvskill{Database}{4}
-\cvskill{CI/CD}{3}
-\cvskill{UI/UX}{2}
-
-\bigskip
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Languages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\cvsection{Languages}
-\cvskill{Portuguese}{5}
-\cvskill{English}{4}
-
-\bigskip
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Softskills %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\cvsection{Soft Skills}
-
-\cvtag{Learning Potential}
-\cvtag{Team Work}
-\cvtag{Organization}
-\cvtag{Professionalism}
-\cvtag{Responsibility}
-\cvtag{Punctuality}
-\cvtag{Dedication}
-\cvtag{Simplicity}
-\cvtag{Communication}
-\cvtag{Collaboration}
+\input{partials/soft_skills}
 
 \pagebreak
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Strengths %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\cvsection{Strengths}
-
-\begin{itemize}
-  \item \color{accent}\bfseries{Development} 
-\end{itemize}
-\cvtag{Design Patterns}
-\cvtag{OOP}
-\cvtag{ReactJS}
-\cvtag{React Native}
-\cvtag{VueJs}
-\cvtag{Ruby on Rails}
-\cvtag{RESTful APIs}
-\cvtag{Graphql}
-\cvtag{HTML}
-\cvtag{CSS}
-\cvtag{Java}
-\cvtag{C\#}
-%\divider\smallskip
-
-\bigskip
-
-\begin{itemize}
-  \item \color{accent}\bfseries{Testing}
-\end{itemize}
-\cvtag{Rspec}
-\cvtag{WebdriverIO}
-\cvtag{Enzyme}
-\cvtag{Jest}
-\cvtag{Mocha}
-%\divider\smallskip
-
-\bigskip
-
-\begin{itemize}
-  \item \color{accent}\bfseries{Databases}
-\end{itemize}
-\cvtag{Mongodb}
-\cvtag{Mysql}
-\cvtag{PostgreSQL}
-%\divider\smallskip
-
-\bigskip
-
-\begin{itemize}
-  \item \color{accent}\bfseries{Development Tools}
-\end{itemize}
-\cvtag{Git}
-\cvtag{Command line}
-\cvtag{Docker}
-%\divider\smallskip
+\input{partials/strengths}
 
 \end{paracol}
 
