@@ -41,11 +41,13 @@
 \newcommand{\itemmarker}{{\small\textbullet}}
 \newcommand{\ratingmarker}{\faCircle}
 
+\renewcommand{\baselinestretch}{1.5}
+
 \RequirePackage{tikz}
 \usetikzlibrary{arrows}
 \RequirePackage[skins]{tcolorbox}
 \RequirePackage{enumitem}
-\setlist{leftmargin=*,labelsep=0.5em,nosep,itemsep=0.25\baselineskip,after=\vskip0.5\baselineskip}
+\setlist{leftmargin=*,labelsep=0.5em,nosep,after=\vskip0.9\baselineskip}
 \setlist[itemize]{label=\faAngleRight}
 \RequirePackage{graphicx}
 \RequirePackage{etoolbox}
@@ -151,7 +153,7 @@
 }
 
 \newcommand{\cvskill}[2]{%
-\textcolor{emphasis}{#1}\hfill
+\textcolor{body}{#1}\hfill
 \foreach \x in {1,...,5}{%
   \space{\ifnumgreater{\x}{#2}{\faCircleO}{\faCircle}}}\par%
 }
