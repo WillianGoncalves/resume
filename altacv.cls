@@ -131,13 +131,14 @@
 }
 
 \newcommand{\cvevent}[4]{%
-  {\large\color{emphasis}#1\par}
-  \smallskip
+  {\large\color{emphasis}#1}\par
   \textbf{\color{accent}#2}\par
-  \smallskip
-  {\small\makebox[0.6\linewidth][l]{\faCalendar \hspace{0.5em}#3}%
-  \ifstrequal{#4}{}{}{\makebox[0.4\linewidth][l]{\faMapMarker\hspace{0.5em}#4}}\par}
-  \medskip
+  \bigskip
+  \begin{tabular}{ c l }
+    \faCalendar & #3 \\
+    \faMapMarker & #4
+  \end{tabular}
+  \bigskip
 }
 
 \newcommand{\cvachievement}[3]{%
