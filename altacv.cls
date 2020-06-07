@@ -32,11 +32,13 @@
 \definecolor{heading}{HTML}{192a56}
 \definecolor{emphasis}{HTML}{333333}
 \definecolor{body}{HTML}{333333}
+\definecolor{border}{HTML}{999999}
 
 \colorlet{heading}{heading}
 \colorlet{accent}{accent}
 \colorlet{emphasis}{emphasis}
 \colorlet{body}{body}
+\colorlet{border}{border}
 
 \newcommand{\itemmarker}{{\small\textbullet}}
 \newcommand{\ratingmarker}{\faCircle}
@@ -46,9 +48,11 @@
 \RequirePackage{tikz}
 \usetikzlibrary{arrows}
 \RequirePackage[skins]{tcolorbox}
+
 \RequirePackage{enumitem}
-\setlist{leftmargin=*,labelsep=0.5em,nosep,after=\vskip0.9\baselineskip}
+\setlist{leftmargin=*,labelsep=0.5em,nosep,after=\vskip0.3\baselineskip}
 \setlist[itemize]{label=\faAngleRight}
+
 \RequirePackage{graphicx}
 \RequirePackage{etoolbox}
 \RequirePackage{dashrule}
@@ -149,9 +153,13 @@
   \smallskip
 }
 
-\newcommand{\cvtag}[1]{%
-  \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
-}
+% cvtag uses tcolorbox: http://linorg.usp.br/CTAN/macros/latex/contrib/tcolorbox/tcolorbox.pdf
+\newtcbox{\cvtag}{on line,
+  arc=2pt,boxrule=0.5pt,
+  colback=white,colframe=border,colupper=body,
+  before upper={\rule[-3pt]{0pt}{10pt}},
+  enlarge bottom by=1.5mm,grow to right by=-1mm,
+  boxsep=1pt,left=6pt,right=6pt,top=4pt,bottom=2pt}
 
 \newcommand{\cvskill}[2]{%
 \textcolor{body}{#1}\hfill
