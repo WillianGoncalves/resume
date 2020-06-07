@@ -70,13 +70,21 @@
 }
 
 \newcommand{\cvevent}[4]{%
-  {\large\color{emphasis}#1}\par
+  {\large\textbf{\color{emphasis}#1}}\par
   \textbf{\color{accent}#2}\par
   \bigskip
   \begin{tabular}{ c l }
     \faCalendar & #3 \\
     \faMapMarker & #4
   \end{tabular}
+  \bigskip
+}
+
+\newcommand{\cveventseparator}{
+  \vspace{2.5em}
+}
+
+\newcommand{\cvsectionseparator}{
   \bigskip
 }
 
